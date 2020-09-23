@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "rrweb-player": "^0.5.6"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "react": "^16.13.1"
+  }
+}

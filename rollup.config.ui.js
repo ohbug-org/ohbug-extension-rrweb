@@ -3,12 +3,13 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import ts from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
+import postcss from 'rollup-plugin-postcss'
 
-const name = `ohbug-extension-rrweb`
+const name = `ohbug-extension-ui-rrweb`
 
 const tsPlugin = ts({
   check: process.env.NODE_ENV === 'production',
-  tsconfig: path.resolve('tsconfig.json'),
+  tsconfig: path.resolve(__dirname, 'ui/tsconfig.json'),
 })
 const extensions = ['.js', '.ts']
 const commonjsOptions = {
@@ -17,23 +18,14 @@ const commonjsOptions = {
 }
 
 const configs = {
-  esm: {
-    format: `es`,
-  },
   umd: {
     format: `umd`,
   },
-  global: {
-    format: `iife`,
-  },
-  cjs: {
-    format: `cjs`,
-  },
 }
 
-const input = path.resolve('src/index.ts')
-const packageFormats = ['esm', 'umd', 'global', 'cjs']
-const external = ['rrweb']
+const input = path.resolve(__dirname, 'ui/component.tsx')
+const packageFormats = ['umd']
+const external = ['react']
 
 function createConfig(isProduction = false) {
   const output = packageFormats.map((format) => {
@@ -41,12 +33,19 @@ function createConfig(isProduction = false) {
       file: path.resolve(`dist/${name}.${format}${isProduction ? '.prod' : ''}.js`),
       format: configs[format].format,
     }
-    if (format === 'umd' || format === 'global') {
-      target.name = 'OhbugExtensionRrweb'
+    if (format === 'umd') {
+      target.name = 'OhbugExtensionUIRrweb'
     }
     return target
   })
-  const plugins = [tsPlugin, nodeResolve({ extensions }), commonjs(commonjsOptions)]
+  const plugins = [
+    tsPlugin,
+    nodeResolve({ extensions }),
+    commonjs(commonjsOptions),
+    postcss({
+      plugins: [],
+    }),
+  ]
   if (isProduction) {
     plugins.push(terser())
   }
@@ -62,5 +61,4 @@ const NODE_ENV = process.env.NODE_ENV
 
 const packageConfigs = [createConfig()]
 if (NODE_ENV === 'production') packageConfigs.push(createConfig(true))
-
 export default packageConfigs
