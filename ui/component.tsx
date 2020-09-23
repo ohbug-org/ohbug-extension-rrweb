@@ -22,7 +22,7 @@ const Component: React.FC<RrwebProps> = ({ event }) => {
 }
 
 export default createExtensionUI({
-  name: 'OhbugExtensionRrweb',
+  name: 'OhbugExtensionUIRrweb',
   key: 'rrweb',
   components: {
     event: Component,
