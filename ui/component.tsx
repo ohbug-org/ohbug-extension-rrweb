@@ -1,12 +1,11 @@
 import React from 'react'
-import type { OhbugEvent } from '@ohbug/types'
+import { createExtensionUI } from '@ohbug/core'
+import type { OhbugExtensionUIComponentProps } from '@ohbug/types'
 import rrwebPlayer from 'rrweb-player'
 import 'rrweb-player/dist/style.css'
 
-interface OhbugExtensionUIRrwebProps {
-  event: OhbugEvent<any>
-}
-const Component: React.FC<OhbugExtensionUIRrwebProps> = ({ event }) => {
+interface RrwebProps extends OhbugExtensionUIComponentProps {}
+const Component: React.FC<RrwebProps> = ({ event }) => {
   const ref = React.useRef<HTMLDivElement>(null)
   React.useEffect(() => {
     if (ref.current && event && event?.metaData?.rrweb) {
@@ -22,11 +21,10 @@ const Component: React.FC<OhbugExtensionUIRrwebProps> = ({ event }) => {
   return <div ref={ref} />
 }
 
-const extension = {
+export default createExtensionUI({
   name: 'OhbugExtensionRrweb',
   key: 'rrweb',
-  type: 'metaData',
-  component: Component,
-}
-
-export default extension
+  components: {
+    event: Component,
+  },
+})
