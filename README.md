@@ -1,3 +1,11 @@
+<div align="center">
+  <a href="https://ohbug.net" target="_blank">
+    <img src="https://raw.githubusercontent.com/ohbug-org/blog/master/images/ohbug_logo.svg" alt="Ohbug" height="72">
+  </a>
+  
+  <p>An open source application information monitoring platform.</p>
+</div>
+
 # `@ohbug/extension-rrweb`
 
 [![npm](https://img.shields.io/npm/v/@ohbug/extension-rrweb.svg?style=flat-square)](https://www.npmjs.com/package/@ohbug/extension-rrweb)
