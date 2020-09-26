@@ -1,6 +1,14 @@
 {
+  "ohbug": {
+    "name": "OhbugExtensionRrweb",
+    "key": "rrweb",
+    "ui": {
+      "name": "OhbugExtensionUIRrweb",
+      "cdn": "https://cdn.jsdelivr.net/npm/@ohbug/extension-rrweb@latest/dist/ui.umd.min.js"
+    }
+  },
   "name": "@ohbug/extension-rrweb",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Ohbug extension to 'screen recording'",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "homepage": "https://github.com/ohbug-org/ohbug-extension-rrweb",
@@ -12,11 +20,11 @@
     "url": "https://github.com/ohbug-org/ohbug-extension-rrweb"
   },
   "license": "MIT",
-  "main": "dist/ohbug-extension-rrweb.cjs.prod.js",
-  "module": "dist/ohbug-extension-rrweb.esm.prod.js",
-  "unpkg": "dist/ohbug-extension-rrweb.global.prod.js",
-  "jsdelivr": "dist/ohbug-extension-rrweb.global.prod.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist"
   ],

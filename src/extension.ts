@@ -3,7 +3,7 @@ import { record } from 'rrweb'
 import type { eventWithTime } from 'rrweb/typings/types'
 
 const eventsMatrix: eventWithTime[][] = [[]]
-export const extension = createExtension({
+const extension = createExtension({
   name: 'OhbugExtensionRrweb',
   init: () => {
     record({
@@ -24,3 +24,5 @@ export const extension = createExtension({
     return event
   },
 })
+
+export default extension
