@@ -8,7 +8,7 @@
     }
   },
   "name": "@ohbug/extension-rrweb",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Ohbug extension to 'screen recording'",
   "author": "chenyueban <jasonchan0527@gmail.com>",
   "homepage": "https://github.com/ohbug-org/ohbug-extension-rrweb",
@@ -34,8 +34,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.2.0",
-    "@typescript-eslint/parser": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
@@ -52,7 +52,7 @@
     "typescript": "^4.0.3"
   },
   "peerDependencies": {
-    "rrweb": "^0.8.2"
+    "rrweb": "^0.9.7"
   },
   "publishConfig": {
     "access": "public"
