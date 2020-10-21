@@ -9,10 +9,12 @@ const Component: React.FC<RrwebProps> = ({ event }) => {
   const ref = React.useRef<HTMLDivElement>(null)
   React.useEffect(() => {
     if (ref.current && event && event?.metaData?.rrweb) {
+      const events = JSON.parse(JSON.stringify(event.metaData.rrweb))
       new rrwebPlayer({
         target: ref.current,
+        // @ts-ignore
         props: {
-          events: event.metaData.rrweb,
+          events,
         },
       })
     }

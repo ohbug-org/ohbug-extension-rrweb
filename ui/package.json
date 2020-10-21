@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "rrweb-player": "^0.6.1"
+    "rrweb-player": "^0.6.2"
   },
   "peerDependencies": {
     "react": "^16.13.0"
