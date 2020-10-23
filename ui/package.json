@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "rrweb-player": "^0.6.2"
+    "rrweb-player": "^0.6.2",
+    "use-deep-compare-effect": "^1.4.0"
   },
   "peerDependencies": {
     "react": "^16.13.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.49",
-    "react": "^16.13.1"
+    "@types/react": "^16.9.53",
+    "react": "^17.0.1"
   }
 }

@@ -3,24 +3,41 @@ import { createExtensionUI } from '@ohbug/core'
 import type { OhbugExtensionUIComponentProps } from '@ohbug/types'
 import rrwebPlayer from 'rrweb-player'
 import 'rrweb-player/dist/style.css'
+import useDeepCompareEffect from 'use-deep-compare-effect'
 
 interface RrwebProps extends OhbugExtensionUIComponentProps {}
 const Component: React.FC<RrwebProps> = ({ event }) => {
-  const ref = React.useRef<HTMLDivElement>(null)
-  React.useEffect(() => {
-    if (ref.current && event && event?.metaData?.rrweb) {
-      const events = JSON.parse(JSON.stringify(event.metaData.rrweb))
-      new rrwebPlayer({
-        target: ref.current,
-        // @ts-ignore
-        props: {
-          events,
-        },
-      })
-    }
-  }, [event, ref.current])
+  const container = React.useRef<HTMLDivElement>(null)
+  const component = React.useRef<rrwebPlayer>(null)
 
-  return <div ref={ref} />
+  const events = React.useMemo(
+    () => (event && event?.metaData?.rrweb ? JSON.parse(JSON.stringify(event.metaData.rrweb)) : []),
+    [event]
+  )
+
+  useDeepCompareEffect(() => {
+    // @ts-ignore
+    component.current?.$destroy()
+    // @ts-ignore
+    component.current = new rrwebPlayer({
+      target: container.current!,
+      // @ts-ignore
+      props: {
+        events,
+      },
+    })
+
+    return () => {
+      // @ts-ignore
+      component.current?.$destroy()
+    }
+  }, [events])
+
+  return event && event?.metaData?.rrweb ? (
+    <div ref={container} />
+  ) : (
+    <div>There is no corresponding rrweb data for the current Event</div>
+  )
 }
 
 export default createExtensionUI({
