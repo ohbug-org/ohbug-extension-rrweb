@@ -4,7 +4,7 @@
     "key": "rrweb",
     "ui": {
       "name": "OhbugExtensionUIRrweb",
-      "cdn": "https://cdn.jsdelivr.net/npm/@ohbug/extension-rrweb@latest/dist/ui.umd.min.js"
+      "cdn": "https://esm.sh/@ohbug/extension-rrweb/dist/ui.esm.min.js"
     }
   },
   "name": "@ohbug/extension-rrweb",
