@@ -1,17 +1,19 @@
-import React from 'react'
+import { FC, useRef, useMemo } from 'react'
 import { createExtensionUI } from '@ohbug/core'
 import type { OhbugExtensionUIComponentProps } from '@ohbug/types'
+import useDeepCompareEffect from 'use-deep-compare-effect'
 import rrwebPlayer from 'rrweb-player'
 import 'rrweb-player/dist/style.css'
-import useDeepCompareEffect from 'use-deep-compare-effect'
 
-interface RrwebProps extends OhbugExtensionUIComponentProps {}
-const Component: React.FC<RrwebProps> = ({ event }) => {
-  const container = React.useRef<HTMLDivElement>(null)
-  const component = React.useRef<rrwebPlayer>(null)
+const Component: FC<OhbugExtensionUIComponentProps> = ({ event }) => {
+  const container = useRef<HTMLDivElement>(null)
+  const component = useRef<rrwebPlayer>(null)
 
-  const events = React.useMemo(
-    () => (event && event?.metaData?.rrweb ? JSON.parse(JSON.stringify(event.metaData.rrweb)) : []),
+  const events = useMemo(
+    () =>
+      event && event?.metaData?.rrweb
+        ? JSON.parse(JSON.stringify(event.metaData.rrweb))
+        : [],
     [event]
   )
 
@@ -21,7 +23,6 @@ const Component: React.FC<RrwebProps> = ({ event }) => {
     // @ts-ignore
     component.current = new rrwebPlayer({
       target: container.current!,
-      // @ts-ignore
       props: {
         events,
       },

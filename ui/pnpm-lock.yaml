@@ -1,0 +1,125 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@types/react': ^17.0.3
+  react: ^17.0.2
+  rrweb-player: ^0.7.1
+  use-deep-compare-effect: ^1.6.1
+
+dependencies:
+  rrweb-player: 0.7.1
+  use-deep-compare-effect: 1.6.1_react@17.0.2
+
+devDependencies:
+  '@types/react': 17.0.3
+  react: 17.0.2
+
+packages:
+
+  /@babel/runtime/7.13.16:
+    resolution: {integrity: sha512-7VsWJsI5USRhBLE/3of+VU2DDNWtYHQlq2IHu2iL15+Yx4qVqP8KllR6JMHQlTKWRyDk9Tw6unkqSusaHXt//A==}
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+
+  /@tsconfig/svelte/1.0.10:
+    resolution: {integrity: sha512-EBrpH2iXXfaf/9z81koiDYkp2mlwW2XzFcAqn6qh7VKyP8zBvHHAQzNhY+W9vH5arAjmGAm5g8ElWq6YmXm3ig==}
+    dev: false
+
+  /@types/css-font-loading-module/0.0.4:
+    resolution: {integrity: sha512-ENdXf7MW4m9HeDojB2Ukbi7lYMIuQNBHVf98dbzaiG4EEJREBd6oleVAjrLRCrp7dm6CK1mmdmU9tcgF61acbw==}
+    dev: false
+
+  /@types/prop-types/15.7.3:
+    resolution: {integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==}
+
+  /@types/react/17.0.3:
+    resolution: {integrity: sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==}
+    dependencies:
+      '@types/prop-types': 15.7.3
+      '@types/scheduler': 0.16.1
+      csstype: 3.0.8
+
+  /@types/scheduler/0.16.1:
+    resolution: {integrity: sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==}
+
+  /@xstate/fsm/1.6.0:
+    resolution: {integrity: sha512-YJpzKLPxMBUUQCTkjIbicsax6svTbPz5ykTkotIaa3kOoTnBJ4CWfC0cSQuMg7FAsfV2XWOuEsFq0dbmY7NtXg==}
+    dev: false
+
+  /csstype/3.0.8:
+    resolution: {integrity: sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==}
+
+  /dequal/2.0.2:
+    resolution: {integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /fflate/0.4.8:
+    resolution: {integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==}
+    dev: false
+
+  /js-tokens/4.0.0:
+    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
+
+  /loose-envify/1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: true
+
+  /mitt/1.2.0:
+    resolution: {integrity: sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==}
+    dev: false
+
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /react/17.0.2:
+    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: true
+
+  /regenerator-runtime/0.13.7:
+    resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
+    dev: false
+
+  /rrweb-player/0.7.1:
+    resolution: {integrity: sha512-9Lsj3yMpBjejftMoFW2TJD1H0TUt451KhMawVAv+wgWzAMw8QZ56XTWx7LGRRxw6H+yRT+n7aEqaTPMMt4fNoQ==}
+    dependencies:
+      '@tsconfig/svelte': 1.0.10
+      rrweb: 0.9.14
+    dev: false
+
+  /rrweb-snapshot/1.1.1:
+    resolution: {integrity: sha512-xRX7s2/MA/Ifnul4ImAquD1w/Nkz6WOACm3xdKDdQrCD/xKdgcu1yWoJ8eSIXyfVSuIt4VfrhxJdeHyhC1gmGQ==}
+    dev: false
+
+  /rrweb/0.9.14:
+    resolution: {integrity: sha512-nm2rrVNoyWFPrbGQmcvTTlA7XjbbgPIgO7qsW0Zyr5iOURIFJDGPHFmOVLRyLpWiriVtEoXh6a+x+D1sj+qwWg==}
+    dependencies:
+      '@types/css-font-loading-module': 0.0.4
+      '@xstate/fsm': 1.6.0
+      fflate: 0.4.8
+      mitt: 1.2.0
+      rrweb-snapshot: 1.1.1
+    dev: false
+
+  /use-deep-compare-effect/1.6.1_react@17.0.2:
+    resolution: {integrity: sha512-VB3b+7tFI81dHm8buGyrpxi8yBhzYZdyMX9iBJra7SMFMZ4ci4FJ1vFc1nvChiB1iLv4GfjqaYfvbNEpTT1rFQ==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13'
+    dependencies:
+      '@babel/runtime': 7.13.16
+      '@types/react': 17.0.3
+      dequal: 2.0.2
+      react: 17.0.2
+    dev: false

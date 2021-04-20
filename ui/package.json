@@ -1,13 +1,16 @@
 {
-  "dependencies": {
-    "rrweb-player": "^0.6.2",
-    "use-deep-compare-effect": "^1.4.0"
+  "scripts": {
+    "update:deps": "pnpm update --interactive --latest"
   },
   "peerDependencies": {
-    "react": "^16.13.0"
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "rrweb-player": "^0.7.1",
+    "use-deep-compare-effect": "^1.6.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.53",
-    "react": "^17.0.1"
+    "@types/react": "^17.0.3",
+    "react": "^17.0.2"
   }
 }
