@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/ohbug-org/ohbug-extension-rrweb/compare/v1.4.0...v1.4.1) (2021-04-21)
+
+### Features
+
+- **ui:** 恢复 react 依赖 ([4c22e8c](https://github.com/ohbug-org/ohbug-extension-rrweb/commit/4c22e8cd2469e5efe348f70bb4ec5f0d48701b20))
+
 ## [1.4.0](https://github.com/ohbug-org/ohbug-extension-rrweb/compare/v1.3.0...v1.4.0) (2021-04-20)
 
 ### Features
