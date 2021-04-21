@@ -5,5 +5,12 @@
   "dependencies": {
     "rrweb-player": "^0.7.1",
     "use-deep-compare-effect": "^1.6.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "react": "^17.0.2"
   }
 }
