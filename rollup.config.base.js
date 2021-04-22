@@ -20,7 +20,9 @@ export function createConfig(input, output, plugins = [], external = []) {
     output,
     plugins: [
       replace({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV ? 'production' : 'development'),
+        'process.env.NODE_ENV': JSON.stringify(
+          process.env.NODE_ENV ? 'production' : 'development'
+        ),
       }),
       tsPlugin,
       nodeResolve({ extensions }),
@@ -31,7 +33,12 @@ export function createConfig(input, output, plugins = [], external = []) {
   }
 }
 
-export function createMinifiedConfig(input, output, plugins = [], external = []) {
+export function createMinifiedConfig(
+  input,
+  output,
+  plugins = [],
+  external = []
+) {
   const { terser } = require('rollup-plugin-terser')
   return createConfig(
     input,
